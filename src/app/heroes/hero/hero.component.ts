@@ -25,4 +25,12 @@ export class HeroComponent {
     this.age = 34;
   }
 
+  resetForm():void {
+    this.name = 'ironman';
+    this.age = 45;
+    // document.querySelectorAll('h1')!.forEach( element => {
+    //   element.innerHTML='<h1>Desde Angular</h1>'
+    // }); Estas instrucciones estan fuera de deteccion de cambios de Angular
+  }
+
 }
