@@ -4,10 +4,12 @@
         let character of charactersList;
         let i = index;
         let isFirst = first;
-        let isLast = last" 
+        let isLast = last;
+        let isEven = even;
+        let isOdd = odd;" 
         class="list-group-item">
 
-        <span class="text-primary"> {{ i + 1 }}. </span>
+        <span class="text-primary"> {{ i +1 }}. </span>
 
         <span>{{ character.name }} - </span>
 
@@ -15,7 +17,9 @@
 
         <span>{{ character.power }}</span>
 
-        <span>Es el primero: {{ isFirst }}</span>
-        <span>Es el último: {{ isLast }}</span>
+        <!-- <span>Es el primero: {{ isFirst }}</span>
+        <span>Es el último: {{ isLast }}</span> -->
+        <!-- <span>Es par : {{isEven}}</span>
+        <span>Es impar: {{isOdd}}</span> -->
     </li>
 </ul>
