@@ -23,7 +23,10 @@ export class MainPageComponent {
     ];
 
     onNewCharacter( character: Character):void {
-        console.log('MainPage');
-        console.log(character);
+        this.characters.push(character);
+    }
+
+    onDeleteCharacter(id:number){
+        this.characters.splice(id) //emision, recibirlo, suscribirse y realizar algo con la emision del evento
     }
 }
