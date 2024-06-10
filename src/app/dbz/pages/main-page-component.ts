@@ -26,7 +26,7 @@ export class MainPageComponent {
         this.characters.push(character);
     }
 
-    onDeleteCharacter(id:number){
-        this.characters.splice(id) //emision, recibirlo, suscribirse y realizar algo con la emision del evento
+    onDeleteCharacter(index:number){
+        this.characters.splice(index, 1) //emision, recibirlo, suscribirse y realizar algo con la emision del evento
     }
 }
