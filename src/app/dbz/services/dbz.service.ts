@@ -23,7 +23,7 @@ export class DbzService {
         }
     ];
 
-    onNewCharacter( character: Character):void {
+    addCharacter( character: Character):void {
         const newCharacter:Character = { id: uuid(), ...character } // operador spret, toma las propiedades de character y exparse en el nuevo objeto
         this.characters.push(newCharacter);
     }

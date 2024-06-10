@@ -8,7 +8,19 @@ import { DbzService } from '../services/dbz.service';
 })
 
 export class MainPageComponent {
-    constructor ( public dbzService: DbzService){ 
+    constructor ( private dbzService: DbzService){ 
         //inyección de dependencias, me habilta en mi componente page toda la informacion utilizada en el servicio
+    }
+
+    get characters (): Character[] {
+        return [...this.dbzService.characters]; //utilizar una copia de characters con spret
+    }
+    
+    onDeleteCharacter( id: string): void {
+        this.dbzService.deleteCharacterById(id);
+    }
+
+    onNewCharacter( character: Character): void {
+        this.dbzService.addCharacter( character );
     }
 }
