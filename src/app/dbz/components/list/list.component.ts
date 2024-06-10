@@ -18,12 +18,14 @@ export class ListComponent {
 
   // onDelete = Index emitir en list component
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter(); //instancia emisor de evento del component list hacia el padre main page.
+  public onDelete: EventEmitter<string> = new EventEmitter(); //instancia emisor de evento del component list hacia el padre main page.
   
 
-  onDeleteCharacter( index: number ):void {
+  onDeleteCharacter( id?: string ):void {
     //TODO Emitir el id del personaje
-    // console.log({index});
-    this.onDelete.emit(index);
+
+    if(!id) return; //si no existe no lo llame
+    // console.log({ id });
+    this.onDelete.emit(id);
   }
 }
